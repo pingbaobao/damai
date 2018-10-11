@@ -7,6 +7,7 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@babel/runtime": "^7.1.2",
     "babel-loader": "^8.0.4",
     "concurrently": "^4.0.1",
     "del": "^3.0.0",
@@ -25,7 +26,7 @@
     "start": "concurrently \"npm run mock\"  \"npm run dev\""
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
-    "zepto-browserify": "^1.1.6-1"
+    "better-scroll": "^1.13.2",
+    "yo3": "^3.1.8"
   }
 }

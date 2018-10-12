@@ -1,10 +1,18 @@
-const job_controller = require('../controllers/home_job_controller');
-const search_controller = require('../controllers/search_controller');
-const profile_controller = require('../controllers/profile_controller');
+import home_controller from'../controllers/home_controller';
+import showinfo_controller from'../controllers/showinfo_controller';
+import category_controller from'../controllers/category_controller';
+import mine_controller from'../controllers/mine_controller';
+import search_controller from'../controllers/search_controller';
+import sigup_controller from'../controllers/sigup_controller';
+import login_controller from'../controllers/login_controller';
 
 const routes={
-    "#job":job_controller,
+    "#home":home_controller,
+    "#showinfo":showinfo_controller,
+    "#category":category_controller,
+    "#mine":mine_controller,
     "#search":search_controller,
-    "#profile":profile_controller
+    "#sigup":sigup_controller,
+    "#login":login_controller
 }
-module.exports=routes;
+export { routes };

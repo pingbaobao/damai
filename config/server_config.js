@@ -19,9 +19,11 @@ const server_config = {
             changeOrigin: true,
         })
     ]
-    // open: true, //打开新的页面
+    // open: true,
     // 以gulp file.js文件路径为基准
     // directoryListing: true
 }
 
+// CommonJS
+// 其实暴露的是module.exports这是一个对象
 module.exports = server_config

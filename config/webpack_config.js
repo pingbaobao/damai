@@ -3,7 +3,7 @@
 const webpack_config = {
     mode: 'production',
     entry: {
-        app: './src/javascripts/page/home.js'
+        app: './src/javascripts/app.js'
     },
     // entry: ['./src/javascripts/app.js', './src/javascripts/vendor.js'],
     output: {

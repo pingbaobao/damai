@@ -9,7 +9,7 @@ class Router {
     constructor ({ initial }) {
         
         this.routes = routes; // 路由表
-        this.initial = initial || '#/job'; // 默认路由
+        this.initial = initial || '#/home'; // 默认路由
         // this.currentUrl = ''; // 记录当前的路径（hash值）
     }
 

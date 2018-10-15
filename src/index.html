@@ -2,20 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>拉勾网</title>
     <script src="/static/javascripts/flexible.js"></script>
-    <link rel="stylesheet" href="/static/fonts/iconfont.css">
-    <link rel="stylesheet" href="./stylesheets/app.css"> 
+    <script src="./static/javascripts/swiper.min.js"></script>
+    <link rel="stylesheet" href="./static/fonts/iconfont.css">
+    <link rel="stylesheet" href="/stylesheets/app.css"> 
+    <link rel="stylesheet" href="./static/css/swiper.min.css">
 </head>
 <body>
    
-    <div id="root"></div>
+    <div id="root">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="header__location"> 
+                <i class="iconfont icon-daohangdizhi"></i>
+                <span> 全国</span>
+               
+            </div>
+            <div class="header__search">
+                <i class="iconfont icon-sousuo"></i>
+                <span class="search-content">
+                    搜索明星、演出比赛、场馆
+                </span>
+            </div>
+            <div class="header__mine">
+                <i class="iconfont icon-wode"></i>
+            </div>
+        </div>
 
-    <script src="/static/javascripts/zepto.min.js"></script>
-    <script src="/static/javascripts/handlebars-v4.0.12.js"></script>
-    <script src="./javascripts/app.js"></script>
+        <!-- 轮播图 -->
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="//img.alicdn.com/tps/i4/TB1GdxCgNTpK1RjSZFKSuu2wXXa.jpg_q60.jpg_.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="//img.alicdn.com/tps/i4/TB1GdxCgNTpK1RjSZFKSuu2wXXa.jpg_q60.jpg_.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="//img.alicdn.com/tps/i4/TB1GdxCgNTpK1RjSZFKSuu2wXXa.jpg_q60.jpg_.webp" alt="">
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./static/javascripts/zepto.min.js"></script>
+    <script src="./static/javascripts/handlebars-v4.0.12.js"></script>
+    <script src="./javascripts/main.js"></script>
 </body>
 </html>
 

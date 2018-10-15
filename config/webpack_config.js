@@ -7,7 +7,7 @@ const webpack_config = {
     },
     // entry: ['./src/javascripts/app.js', './src/javascripts/vendor.js'],
     output: {
-        filename: '[name].js'
+        filename: 'main.js'
     },
     module: {
         rules: [ // 在这里通过配置规则来使用loader

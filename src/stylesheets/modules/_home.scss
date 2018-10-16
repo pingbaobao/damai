@@ -1,6 +1,5 @@
-
-.header{
-    width: 10rem;
+.header {
+    width: 100%;
     height: 1.333333rem;
     position: fixed;
     top: 0;
@@ -9,18 +8,22 @@
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
+    z-index: 9999;
 }
-.header__location{
+
+.header__location {
     margin: 0 .48rem;
     font-size: .42667rem;
     color: #222;
-    i{
+
+    i {
         font-size: .42667rem;
     }
 }
-.header__search{
+
+.header__search {
     flex: 1;
-    justify-content: left!important;
+    justify-content: left !important;
     padding-left: .48rem;
     height: .74667rem;
     border-radius: 1.33333rem;
@@ -29,23 +32,305 @@
     font-size: .37333rem;
     display: flex;
     align-items: center;
-    i{
-       
-       font-size: .4rem;;
+
+    i {
+
+        font-size: .4rem;
+        ;
         margin-right: .24rem;
     }
 }
-.header__mine{ 
+
+.header__mine {
     font-size: .626667rem;
     margin: 0 .48rem 0 .32rem;
 }
-.swiper{
-    position: relative;
-    top: 1.333333rem;
-    
+
+.slideshow {
+    margin-top: 1.333333rem;
+    width: 100%;
+    height: 3.36rem;
+
+    img {
+        width: 100%;
+        height: 3.36rem;
+    }
 }
 
-.swiper-slide img{
-    height: 3.36rem;
-    width: 10rem;
+.menu {
+    background: #fff;
+    padding: .48rem 0 .24rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu-item {
+        display: block;
+        width: 25%;
+        margin-bottom: .4rem;
+        text-align: center;
+
+        span {
+            width: .85333rem;
+            height: .85333rem;
+            margin: 0 auto;
+            display: block;
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        p {
+            padding-top: .08rem;
+            font-size: .32rem;
+            color: #222;
+        }
+    }
+}
+
+.instar {
+    margin-top: .4rem;
+
+    .instar__title {
+        position: relative;
+        height: .58667rem;
+        font-weight: 700;
+        padding-left: .48rem;
+        font-size: .45333rem;
+        color: #111;
+        margin-bottom: .42667rem;
+        text-align: left;
+
+        span {
+            position: absolute;
+            font-size: .32rem;
+            color: #999;
+            right: .48rem;
+            bottom: 0;
+
+            i {
+                font-size: .24rem;
+                position: relative;
+                top: -.04rem;
+                margin-left: .10667rem;
+            }
+        }
+    }
+}
+
+.artlist {
+    position: relative;
+    z-index: 1010;
+    height: 2.77333rem;
+    margin-left: .48rem;
+}
+
+.artlist__item {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 2.77333rem;
+    width: 6.02667rem;
+    margin-right: .13333rem;
+    background: #f5f5f5;
+    border-radius: .08rem;
+
+    .artlist__item__img {
+        float: left;
+        width: 2.13333rem;
+        height: 2.13333rem;
+        margin: .32rem .24rem .32rem .32rem;
+        border-radius: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .artlist__item__info {
+        float: left;
+        width: 3.33333rem;
+        text-align: left;
+
+        .artist-main {
+            .artist-name {
+                display: inline-block;
+                margin-top: .32rem;
+                font-size: .42667rem;
+                color: #111;
+            }
+
+            .artist-fans {
+                font-size: .26667rem;
+                color: #111;
+                margin-left: .32rem;
+            }
+        }
+
+        .artist-city {
+            margin-top: .16rem;
+            font-size: .32rem;
+            color: #aaa;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .artist-fllow {
+            margin-top: .37333rem;
+            width: 1.28rem;
+            height: .56rem;
+            line-height: .56rem;
+            font-size: .32rem;
+            text-align: center;
+            color: #fff;
+            background-image: -webkit-linear-gradient(317deg, #ff66bc 6%, #ff1268 97%);
+            background-image: linear-gradient(-227deg, #ff66bc 6%, #ff1268 97%);
+            border-radius: 1.33333rem;
+        }
+    }
+}
+
+
+.showcontrol__title {
+    font-weight: 700;
+    padding-left: .48rem;
+    margin-top: 1.2rem;
+    font-size: .45333rem;
+    color: #111;
+}
+
+.showcontrol__nav {
+    position: sticky;
+    top: 1.3rem;
+    left: 0;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 .18667rem;
+    width: 100%;
+    z-index: 1002;
+    background: #fff;
+    height: 1.38667rem;
+    li {
+        flex: 1;
+        height: 1.38667rem;
+        text-align: center;
+        line-height: 1.38667rem;
+        font-size: .37333rem;
+        i {
+            color: #ddd;
+            font-size: .10667rem;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 1.38667rem;
+        }
+    }
+    li.active{
+        color: #ff1268;
+    }
+    li.loser{
+        color: #aaa;
+    }
+
+    .controller-list{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.show-wrapper {
+    padding-top: .21333rem;
+
+    .show-item {
+        margin: 0 0 1.2rem .48rem;
+        display: flex;
+        position: relative;
+
+        .item-img {
+            img {
+                width: 2.4rem;
+                height: 3.2rem;
+                border-radius: .08rem;
+                border: 1px solid rgba(0, 0, 0, .06);
+            }
+        }
+
+        .item-info {
+            margin-left: .32rem;
+            padding-bottom: 0;
+            position: relative;
+            flex: 1;
+
+            .item-info__title {
+                width: 6.32rem;
+                font-size: .42667rem;
+                color: #111;
+                font-weight: 700;
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                word-break: break-all;
+            }
+
+            .item-info__time {
+                width: 6.32rem;
+                font-size: .32rem;
+                color: #aaa;
+                padding-top: .16rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                word-break: break-all;
+                letter-spacing: 0;
+                -webkit-line-clamp: 1;
+            }
+
+            .item-info__promotion {
+                .item-info__promotion__seat {
+                    margin-top: .26667rem;
+                    margin-right: .08rem;
+                    padding: .01333rem .08rem .04rem;
+                    font-size: .29333rem;
+                    border-radius: .08rem .08rem .21333rem .08rem;
+                    line-height: normal;
+                    border: none;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    letter-spacing: .01333rem;
+                    background: #eee !important;
+                    color: #111 !important;
+                }
+                .item-info__promotion__package{
+                    padding: .01333rem .08rem .04rem;
+                    font-size: .29333rem;
+                    color: #ff1268;
+                    background: #fbe8ef;
+                    border-radius: .08rem .08rem .21333rem .08rem;
+                    line-height: normal;
+                    border: none;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    letter-spacing: .01333rem;
+                    margin-top: .26667rem;
+                    margin-right: .08rem;
+                }
+            }
+            .item-info__price{
+                position: absolute;
+                bottom: 0;
+                width: 98%;
+                margin-top: .26667rem;
+                font-size: 0;
+                .item-info__price-str{
+                    font-size: .37333rem;
+                    color: #ff1268;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    line-height: .42667rem;
+                }
+            }
+        }
+    }
 }

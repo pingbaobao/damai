@@ -1,0 +1,21 @@
+{{#each _home_show_list}}
+
+<div class="show-item">
+    <div class="item-img">
+        <img src={{this.verticalPic}} 
+            alt="">
+    </div>
+    <div class="item-info">
+        <div class="item-info__title">{{this.name}}</div>
+        <div class="item-info__time">{{this.venueCity}} / {{this.showTime}} /  {{this.venueName}}</div>
+        <div class="item-info__promotion">
+            <span class="item-info__promotion__seat">可选坐</span>
+            <span class="item-info__promotion__package">套票</span>
+        </div>
+        <div class="item-info__price">
+            <span class="item-info__price-str">￥{{this.priceStr}}</span>
+        </div>
+    </div>
+</div>
+
+{{/each}}

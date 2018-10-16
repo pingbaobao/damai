@@ -1,0 +1,93 @@
+ <!-- 轮播图 -->
+ <div class="slideshow">
+    <div class="swiper-container slideshow-box">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="//img.alicdn.com/tps/i4/TB1GdxCgNTpK1RjSZFKSuu2wXXa.jpg_q60.jpg_.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="//img.alicdn.com/tps/i4/TB1tMArpCcqBKNjSZFgSut_kXXa.jpg_q60.jpg_.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="//img.alicdn.com/tps/i4/TB10lVnDCtYBeNjSspkSuvU8VXa.jpg_q60.jpg_.webp" alt="">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<!--中部菜单  -->
+<div class="menu">
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1p8sXdNYaK1RjSZFnwu180pXa.png');"></span>
+        <p>演唱会</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1JgTUdNTpK1RjSZFGwu3HqFXa.png');"></span>
+        <p>话剧歌剧</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1aWPUdFzqK1RjSZFCwu2bxVXa.png');"></span>
+        <p>音乐会</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1V5vWdIbpK1RjSZFywu0_qFXa.png');"></span>
+        <p>体育</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1nr7XdNjaK1RjSZFAwu2dLFXa.png');"></span>
+        <p>曲苑杂谈</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB114LUdNTpK1RjSZFGwu3HqFXa.png');"></span>
+        <p>亲子</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1o.vTdFYqK1RjSZLewu2XppXa.png');"></span>
+        <p>展览休闲</p>
+    </div>
+    <div class="menu-item">
+        <span style="background-image: url('//img.alicdn.com/tps/i4/TB1AkBldMHqK1RjSZFPwu3wapXa.png');"></span>
+        <p>休闲</p>
+    </div>
+</div>
+<!-- 最in明星 -->
+<div class="instar">
+    <div class="instar__title">
+        最in明星演出
+        <span>
+            我的关注
+            <i class="iconfont icon-jiantouyou"></i>
+        </span>
+    </div>
+    <div class="artlist">
+
+        <div class="swiper-container slideshow-instar">
+            <div class="swiper-wrapper ">
+                {{#each _home_instar_list}}
+                    <div class="swiper-slide artlist__item-box">
+                        <div class="artlist__item">
+                            <div class="artlist__item__img" style='background-image: url("{{this.artPic}}");'></div>
+                            <div class="artlist__item__info">
+                                <div class="artist-main">
+                                    <span class="artist-name">{{this.artistName}}</span>
+                                    <span class="artist-fans">{{this.artFans}}</span>
+                                </div>
+                                <div class="artist-city">{{this.citySet}}</div>
+                                <div class="artist-fllow">+关注</div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="showcontrol">
+        <div class="showcontrol__title">
+            更多演出
+        </div>
+</div>

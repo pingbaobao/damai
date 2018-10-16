@@ -60,7 +60,6 @@ class Router {
         // 当hash值变化的时候此事件会执行
         window.addEventListener('hashchange', this.refresh.bind(this));
     }
-
 }
 
 export default Router;

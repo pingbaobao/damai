@@ -1,12 +1,10 @@
 
-import job_controller from '../controllers/job_controller';
-import search_controller from '../controllers/search_controller';
-import profile_controller from '../controllers/profile_controller';
+import home_controller from '../controllers/home_controllers/home_main_controller'
+
 
 const routes = {
-    '#/job': job_controller,
-    '#/search': search_controller,
-    '#/profile': profile_controller
+    '#/home': home_controller,
+    
 }
 
 export { routes } ;

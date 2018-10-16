@@ -1,4 +1,4 @@
 {
-    "/api/job/list": "/list",
-    "/api/job/list_time": "/list"
+    "/api/home/instar": "/instar",
+    "/api/home/recommend": "/recommend"
 }

@@ -1,0 +1,34 @@
+{{#each _project_list}}
+<div class="project-item">
+    <div class="project-item__pic">
+        <img src="{{this.verticalPic}}" alt="">
+    </div>
+    <div class="project-item__info">
+        <div class="project-item__info_title">
+            <span>{{this.name}}</span>
+        </div>
+        <div class="project-item__info_time">
+            <span>{{this.showTime}} | {{this.venueName}}</span>
+        </div>
+        <div class="project-item__info_promotion">
+            <span class="tag project-item__info_tag project-item__info_xuanzuo tag-small">
+                可选座
+            </span>
+            <span class="tag skin project-item__info_tag tag-small">
+                {{this.promotionTags}}
+            </span>
+        </div>
+        <div class="project-item__info_price">
+            <span class="project-item__info_price_str">
+                {{this.priceStr}}
+            </span>
+            <span class="project-item__info_price_unit">
+                元
+            </span>
+        </div>
+        <div class="project-item__info_head">
+            {{this.subHead}}
+        </div>
+    </div>
+</div>
+{{/each}}

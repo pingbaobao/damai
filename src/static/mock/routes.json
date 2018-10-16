@@ -1,4 +1,4 @@
 {
-    "/api/job/list": "/list",
-    "/api/job/list_time": "/list"
+    "/api/category/opera_list": "/opera_list",
+    "/api/category/opera_list_time": "/opera_list_time"
 }

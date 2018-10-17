@@ -6,7 +6,7 @@ import Router from './router'
 category_controller.render();
 
 //启动路由
-const router = new Router ({initial:'#/category'});
+const router = new Router ({initial:'#/perform'});
 window.router = router;
 router.init();
 

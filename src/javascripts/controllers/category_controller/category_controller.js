@@ -3,7 +3,7 @@ import project_controller from '../category_controller/project_controller'
 //负责将home视图模版渲染在对应的地方
 
 const render = () =>{
-    document.querySelector('#category_root').innerHTML=category_template;
+    document.querySelector('#root').innerHTML=category_template;
     project_controller.render();
     swiper();
     control();
@@ -69,7 +69,7 @@ const control = () =>{
     })
     $('.wrap-projects__content').on('click','.project-item',function(){
         //console.log('ok');
-        $(location).prop('href', 'http://localhost:8080/category.html#/perform');
+        $(location).prop('href', 'http://localhost:8080/#/perform');
     })
     project_controller.select()
 }

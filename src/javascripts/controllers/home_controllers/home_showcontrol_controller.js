@@ -21,17 +21,25 @@ const render = () => {
         }) 
     })
     //菜单的固定
-    _scroll.on("scrollEnd", ({ x, y }) => {
+    _scroll.on("scroll", ({ x, y }) => {
         if(y<=-1017){
-            console.log("显示");
             $(".showcontrol__nav-clone").addClass("showcontrol__nav-clone-active");
         }
         else{
             $(".showcontrol__nav-clone").removeClass("showcontrol__nav-clone-active");
         }
 
-    })
+        // 回到顶部
+        if(y<-1500){
+            $(".gotop").addClass("gotop-active");
+        }else{
+            $(".gotop").removeClass("gotop-active");
+        }
 
+    })
+    $(".gotop").on("click",function(){
+        _scroll.scrollTo(0,0);
+    })
 
 
 }

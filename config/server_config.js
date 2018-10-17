@@ -6,6 +6,7 @@ const server_config = {
     host: 'localhost',
     port: 8080,
     livereload: true,
+    open : true,
     middleware: [
         proxy('/damia', { // /lagou 这个是判断依据 当我们请求'http://localhost:8080/lagou/abc'的时候，这个代理就生效了
             target: 'https://m.damai.com',// 配置目标服务器 当前服务器回去请求 https://m.lagou.com/lagou/abc

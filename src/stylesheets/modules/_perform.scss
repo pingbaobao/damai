@@ -1,0 +1,125 @@
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    font-size: .34667rem;
+    .perform__bd{
+        flex: 1;
+        .pro-item{
+            position: relative;
+            height: 5.06667rem;
+            border-bottom: 1px solid #e7e7e7;
+            background: #fff;
+            .pro-item__blur {
+                position: relative;
+                height: 3.78667rem;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                .pro-item__blur__bg__default{
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: 200% auto;
+                    background-position: 0 50%;
+                    -webkit-transform: scale(1.1)!important;
+                    transform: scale(1.1)!important;
+                    filter: saturate(1) brightness(1) blur(.33333rem) contrast(.8);
+                    
+                }
+            }
+            .pro-item__box{
+                position: absolute;
+                top: .8rem;
+                right: .22667rem;
+                left: .32rem;
+                .pro-item__poster {
+                    float: left;
+                    width: 2.8rem;
+                    height: 3.78667rem;
+                    border-radius: .08rem;
+                }
+                .pro-item__words{
+                    float: left;
+                    padding-left: .32rem;
+                    .pro-item__detail,.pro-item__city{
+                        font-size: .4rem;
+                        color: #fff;
+                    }
+                    .pro-item__detail{
+                        margin-bottom: .24rem;
+                        width: 6.13333rem;
+                        line-height: .50667rem;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    .pro-item__price{
+                        position: absolute;
+                        bottom: 0;
+                        font-size: .53333rem;
+                        font-weight: 700;
+                        color: #ff1268;
+                        .pro-item__price_small {
+                            font-size: .26667rem;
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+        .ticketinfo {
+            border-bottom: 1px solid #e7e7e7;
+            .mini-cell{
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                padding: 0 .32rem;
+                line-height: 1.2rem;
+                font-size: .32rem;
+                color: #999;
+                text-decoration: none;
+                background: #f8f8f8;
+                .label{
+                    color: #999;
+                    line-height: 1.2rem;
+                    margin-right: .4rem;
+                    .icon-duigou{
+                        margin-right: .10667rem;
+                        float: left;
+                        font-size: .34667rem;
+                        color: #ff1268;
+                        
+                    }
+                }
+                .words {
+                    float: left;
+                }
+            }
+            .mini-cell, .mini-cell .wrapper__cont {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                height: 1.2rem;
+                overflow: hidden;
+            }
+        }
+    }
+}
+

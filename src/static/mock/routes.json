@@ -1,4 +1,12 @@
 {
     "/api/home/instar": "/instar",
-    "/api/home/recommend": "/recommend"
+    "/api/home/recommend": "/recommend",
+    "/api/category/all_list": "/all_list",
+    "/api/category/all_list_time": "/all_list_time",
+    "/api/category/concert_list": "/concert_list",
+    "/api/category/concert_list_time": "/concert_list_time",
+    "/api/category/opera_list": "/opera_list",
+    "/api/category/opera_list_time": "/opera_list_time",
+    "/api/category/music_list": "/music_list",
+    "/api/category/music_list_time": "/music_list_time"
 }

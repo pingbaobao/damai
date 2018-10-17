@@ -21,7 +21,7 @@ const render = () => {
         }) 
     })
     //菜单的固定
-    _scroll.on("scroll", ({ x, y }) => {
+    _scroll.on("scrollEnd", ({ x, y }) => {
         if(y<=-1017){
             $(".showcontrol__nav-clone").addClass("showcontrol__nav-clone-active");
         }
@@ -32,6 +32,7 @@ const render = () => {
         // 回到顶部
         if(y<-1500){
             $(".gotop").addClass("gotop-active");
+            
         }else{
             $(".gotop").removeClass("gotop-active");
         }
@@ -39,6 +40,8 @@ const render = () => {
     })
     $(".gotop").on("click",function(){
         _scroll.scrollTo(0,0);
+        $(".showcontrol__nav-clone").removeClass("showcontrol__nav-clone-active");
+        $(".gotop").removeClass("gotop-active");
     })
 
 

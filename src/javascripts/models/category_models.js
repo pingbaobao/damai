@@ -1,17 +1,17 @@
 //提供演唱会信息数据
-const project_list = () =>{
+const project_list = (item="all") =>{
     return $.ajax({
-        url : '/api/category/opera_list',
+        url : '/api/category/'+item+'_list',
         success : (res) => {
-            console.log('ok');
+            //console.log('ok');
             return res;
         }
     })
 }
 
-const project_refresh = () =>{
+const project_refresh = (item="all") =>{
     return $.ajax({
-        url : '/api/category/opera_list_time',
+        url : '/api/category/'+item+'_list_time',
         success : (res) => {
             return res;
         }

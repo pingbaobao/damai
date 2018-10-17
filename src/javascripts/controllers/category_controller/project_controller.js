@@ -4,6 +4,8 @@ import project_model from '../../models/category_models';
 
 import BScroll from 'better-scroll';
 
+//当前加载的分类信息
+let _item = 'all';
 let datasources = [] //project页面要显示的所有数据
 
 const render = () => {
@@ -15,11 +17,31 @@ const render = () => {
     handleContentScroll();
 }
 
+const select = () =>{
+    $('.category-wrapper>.category-wrapper__content>.category-wrapper__item').click(function(){
+        if($(this).index()===0){
+            _item = 'all';
+        }else if($(this).index()===1){
+            _item = 'concert';
+        }else if($(this).index()===2){
+            _item = 'opera';
+        }else if($(this).index()===3){
+            _item = 'music';
+        }else{
+            _item = 'all';
+        }
+        datasources = [];
+        handleContentScroll();
+    })
+}
+
 const handleContentScroll = async () =>{
     // 实例化bscroll
     let _project_scroll = new BScroll('.category-main', {
         startY: -40,
-        probeType: 2
+        probeType: 2,
+        click : true,
+        taps: true
     });
     //console.log('ok')
 
@@ -81,7 +103,7 @@ const refreshProjectList = async () => {//下拉刷新的时候去获取数据
 }
 
 const getProjectList = async () =>{
-    let _project_data = await project_model.project_list();
+    let _project_data = await project_model.project_list(_item);
     let _project_list = _project_data.data.projectInfo;
     datasources = [...datasources,..._project_list]
     renderProjectList() //每次获取到新的数据后重新渲染
@@ -98,5 +120,6 @@ const renderProjectList = () =>{
 }
 
 export default {
-    render
+    render,
+    select
 }

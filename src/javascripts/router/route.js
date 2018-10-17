@@ -1,12 +1,10 @@
 
-import job_controller from '../controllers/job_controller';
-import search_controller from '../controllers/search_controller';
-import profile_controller from '../controllers/profile_controller';
+import perform_controller from '../controllers/perform_controller/perform_controller';
+import category_controller from '../controllers/category_controller/category_controller';
 
 const routes = {
-    '#/job': job_controller,
-    '#/search': search_controller,
-    '#/profile': profile_controller
+    '#/category': category_controller,
+    '#/perform': perform_controller
 }
 
 export { routes } ;

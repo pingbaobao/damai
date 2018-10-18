@@ -59,8 +59,11 @@ body,html{
 }
 
 .header__mine {
-    font-size: .626667rem;
+    font-size: .4rem;
     margin: 0 .48rem 0 .32rem;
+    i{
+        font-size: .666667rem;
+    }
 }
 
 
@@ -244,10 +247,6 @@ body,html{
     li.active {
         color: #ff1268;
     }
-
-    li.loser {
-        color: #aaa;
-    }
 }
 .showcontrol__nav-clone{
     position: fixed;
@@ -278,6 +277,7 @@ body,html{
         padding-inline-start: 40px;
         color: #111;
         border-top: 2px solid #e7e7e7;
+        display: none;
          li {
             width: 100%;
             position: relative;
@@ -421,4 +421,28 @@ body,html{
 }
 .gotop-active{
     display: block;
+}
+
+.loadmore{
+    width: 100%;
+    height: .8rem;
+    text-align: center;
+    font-size: .21333rem;
+    line-height: .8rem;
+    color: #aaa;
+    position: relative;
+    i{  
+        display: block;
+        font-size: .533333rem;
+        animation: loadmore linear 3s infinite;
+    }
+}
+@keyframes loadmore{
+    from {
+        transform: rotateX(0deg) rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateX(0deg) rotateZ(720deg);
+    }
 }

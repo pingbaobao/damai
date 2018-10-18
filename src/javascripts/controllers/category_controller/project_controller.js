@@ -1,6 +1,6 @@
 import project_template from '../../views/category/project.html';
-import project_content_template from '../../views/category/project-content.html'
-import project_model from '../../models/category_models';
+import project_content_template from '../../views/category/project-content.html';
+import project_model from '../../models/category/category_models';
 
 import BScroll from 'better-scroll';
 
@@ -32,6 +32,13 @@ const select = () =>{
         }
         datasources = [];
         handleContentScroll();
+    })
+    $('.wrap-projects__content').on('click','.project-item',function(){
+        sessionStorage.setItem("index", $(this).index());
+        let str = JSON.stringify(datasources)
+        sessionStorage.setItem("data", str);
+        //console.log('ok')
+        $(location).prop('href', 'http://localhost:8080/#/perform');
     })
 }
 

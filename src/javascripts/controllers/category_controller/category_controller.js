@@ -67,10 +67,7 @@ const control = () =>{
         $('.factor_select').css('display','none')
         $('.factor>.factor-wapper>.factor-wapper__item').removeClass("factor_wrapper--active");
     })
-    $('.wrap-projects__content').on('click','.project-item',function(){
-        //console.log('ok');
-        $(location).prop('href', 'http://localhost:8080/#/perform');
-    })
+    
     project_controller.select()
 }
 

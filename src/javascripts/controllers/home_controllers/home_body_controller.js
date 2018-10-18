@@ -1,6 +1,6 @@
 import home_body_template from '../../views/home/body.html';
 import home_instar_model from '../../models/home/home_instar_model';
-const render = async() => {
+const render = async () => {
   let _home_instrar_data = await home_instar_model.home_instar_list();
   // 多个star信息数组
   let _home_instar_list = _home_instrar_data.artistProjectList;
@@ -13,23 +13,27 @@ const render = async() => {
   document.querySelector('.body').innerHTML = _html;
 
   //轮播图
-var boxSwiper = new Swiper('.slideshow-box', {
-  direction: 'horizontal', // 垂直切换选项
-  loop: true, // 循环模式选项
-  autoplay: true, //自动放映
-  // 如果需要分页器
-  pagination: {
-    el: '.swiper-pagination',
-  }
-})
-//最in明星
-var instarSwiper = new Swiper('.slideshow-instar', {
-  direction: 'horizontal', // 垂直切换选项
-  freeMode: true,
-  slidesPerView: '1.56',
-  spaceBetween: 10,
-})
-
+  var boxSwiper = new Swiper('.slideshow-box', {
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
+    autoplay: true, //自动放映
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    }
+  })
+  //最in明星
+  var instarSwiper = new Swiper('.slideshow-instar', {
+    direction: 'horizontal', // 垂直切换选项
+    freeMode: true,
+    slidesPerView: '1.56',
+    spaceBetween: 10,
+  })
+  //menu跳转到category页面
+  $('.menu').on('click', '.menu-item', function () {
+    //console.log('ok');
+    $(location).prop('href', 'http://localhost:8080/#/category');
+  })
 
 }
 export default {

@@ -1,4 +1,4 @@
-const buyers_template = require('../../views/mine/my_buyers_controller.html');
+import buyers_template from '../../views/mine/my_buyers_controller.html';
 
 const render = () => {
     document.querySelector('title').innerHTML='常用购票人';
@@ -22,6 +22,6 @@ const render = () => {
      })
 }
 
-module.exports = {
+export default{
     render
 }

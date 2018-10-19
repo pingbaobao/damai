@@ -1,6 +1,6 @@
-const attention_template = require('../../views/mine/my_attention_controller.html');
-const my_attention_artist = require('./my_attention_artist');
-const my_attention_project = require('./my_attention_project');
+import attention_template from '../../views/mine/my_attention_controller.html';
+import my_attention_artist from'./my_attention_artist';
+import my_attention_project from'./my_attention_project';
 const render = () => {
     document.querySelector('title').innerHTML='我的关注';
     $('#root').html(attention_template);
@@ -16,7 +16,6 @@ const render = () => {
         }
     })
 }
-
-module.exports = {
+export default{
     render
 }

@@ -1,6 +1,6 @@
 
 
-const coupon_template = require('../../views/mine/my_coupon_controller.html');
+import coupon_template from'../../views/mine/my_coupon_controller.html' ;
 
 const render = () => {
     document.querySelector('title').innerHTML='优惠券';
@@ -14,10 +14,8 @@ const render = () => {
         $('.dm-dialog').hide();
     })
     $('.dm-dialog__ft__item').tap(function (){
-        $('.dm-dialog').hide();
+        $('.dm-dialog').hide(); 
     })
 }
 
-module.exports = {
-    render
-}  
+export default{render}

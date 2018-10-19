@@ -1,4 +1,5 @@
-const login_template = require('../../views/mine/login.html');
+
+import login_template from'../../views/mine/login.html' ;
 const render = () => {
     document.querySelector('title').innerHTML='登录';
     $('#root').html(login_template);
@@ -49,9 +50,10 @@ const render = () => {
             
         }
         
+        
     }) 
 }
 
-module.exports = {
+export default{
     render
 }

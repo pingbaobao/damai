@@ -1,4 +1,4 @@
-const feedback_template = require('../../views/mine/my_feedback_controller.html');
+import feedback_template from'../../views/mine/my_feedback_controller.html';
 
 const render = () => {
     document.querySelector('title').innerHTML='意见反馈';
@@ -16,6 +16,6 @@ const render = () => {
      })
 }
 
-module.exports = {
+export default{
     render
 }

@@ -1,4 +1,4 @@
-const my_template = require('../views/mine/my.html');
+import my_template from '../views/mine/my.html';
 
 // const job_controller = require('./home_job_controller'); 
 // const search_controller = require('./search_controller'); 
@@ -65,7 +65,7 @@ $('.my-hd').tap(function () {
 //     })
 // }
 
-module.exports = {
+export default{
     render
 }
 

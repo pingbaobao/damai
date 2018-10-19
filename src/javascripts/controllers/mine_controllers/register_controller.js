@@ -1,4 +1,4 @@
-const register_template = require('../../views/mine/register.html');
+import register_template from'../../views/mine/register.html';
 var is_login = true;
 const render = () => {
     document.querySelector('title').innerHTML='用户注册';
@@ -29,6 +29,6 @@ const render = () => {
     })
 }
 
-module.exports = {
+export default {
     render
 }

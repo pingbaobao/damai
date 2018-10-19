@@ -1,4 +1,4 @@
-const ticket_template = require('../../views/mine/my_ticket_controller.html');
+import ticket_template from'../../views/mine/my_ticket_controller.html' ;
 
 const render = () => {
     document.querySelector('title').innerHTML='我的票';
@@ -6,6 +6,6 @@ const render = () => {
 
 }
 
-module.exports = {
+export default{
     render
 }  

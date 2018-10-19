@@ -15,22 +15,22 @@
             <div class="order__item">
                 <div class="order__item__title_ft">
                     <div class="order__item__title">
-                        <p class="order__item__title_left">订单编号：{{this.a}}</p>
+                        <p class="order__item__title_left">订单编号：{{this.nearestPerformTime}}</p>
                         <div class="order__item__title_right">
-                            <p class="order__item__title_black">{{this.b}}</P>
+                            <p class="order__item__title_black">待付款</P>
                         </div> 
                     </div>
                 </div>
                 <div class="order__item__box">
-                    <img src="http://pimg.dmcdn.cn/perform/project/1658/165807_n_171_214.jpg" alt="" class="order__item__box__poster">
+                    <img src="{{this.verticalPic}}" alt="" class="order__item__box__poster">
                     <div class="order__item__box__words">
-                        <p class="order__item__box__title limit_lines_1">{{this.c}}</p>
-                        <p class="order__item__box__item">{{this.d}}</p>
-                        <p class="order__item__box__item">{{this.e}}</p>
+                        <p class="order__item__box__title limit_lines_1">{{this.name}}</p>
+                        <p class="order__item__box__item">{{this.showTime}}</p>
+                        <p class="order__item__box__item">{{this.cityName}}</p>
                         <p class="order__item__box__position">
-                            {{this.f}}
+                            1张
                             <span class="order__item_right">
-                                {{this.g}}
+                                ￥{{this.formattedPriceStr}}
                                 <span class="order__item_freight">(含运费￥18.00)</span>
                             </span>
                         </p>

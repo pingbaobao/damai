@@ -15,7 +15,7 @@ class Router {
 
     init () {
         this.initialHash(); 
-        this.listenHashChange();
+        this.listenHashChange(); 
     }
 
     initialHash () { // 初始化hash值

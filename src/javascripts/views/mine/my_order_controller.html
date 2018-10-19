@@ -1,0 +1,50 @@
+<div class="order-list">
+    <div class="dm-empty" style="display:none">
+        <div class="dm-empty__box">
+            <div class="dm-empty__img">
+                <img src="//gw.alicdn.com/tfs/TB1vfTxsNSYBuNjSsphXXbGvVXa-711-507.png" alt="">
+            </div>
+            <div class="dm-empty__tips">
+                <p class="order-list-empty-text">您暂时没有订单哟~</p>
+            </div>
+        </div>
+    </div>
+    <div class="_v-container" style="width: 100%; height: 100%;">
+        <div class="_v-content" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+            {{#each _job_list}}
+            <div class="order__item">
+                <div class="order__item__title_ft">
+                    <div class="order__item__title">
+                        <p class="order__item__title_left">订单编号：{{this.nearestPerformTime}}</p>
+                        <div class="order__item__title_right">
+                            <p class="order__item__title_black">待付款</P>
+                        </div> 
+                    </div>
+                </div>
+                <div class="order__item__box">
+                    <img src="{{this.verticalPic}}" alt="" class="order__item__box__poster">
+                    <div class="order__item__box__words">
+                        <p class="order__item__box__title limit_lines_1">{{this.name}}</p>
+                        <p class="order__item__box__item">{{this.showTime}}</p>
+                        <p class="order__item__box__item">{{this.cityName}}</p>
+                        <p class="order__item__box__position">
+                            1张
+                            <span class="order__item_right">
+                                ￥{{this.formattedPriceStr}}
+                                <span class="order__item_freight">(含运费￥18.00)</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            <div class="loading-layer">
+                <span class="spinner-holder">
+                    <div class="no-data-text active" style="color: rgb(170, 170, 170);">没有更多数据了</div>
+
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>

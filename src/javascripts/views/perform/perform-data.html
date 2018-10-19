@@ -1,0 +1,142 @@
+<div class="perform__bd">
+    <div class="pro-item">
+        <div class="pro-item__blur">
+            <div class="pro-item__blur__bg__default" style="background-image: url({{this.verticalPic}});background-color: rgb(231, 231, 231);"></div>
+        </div>
+        <div class="pro-item__box">
+            <img src="{{this.verticalPic}}" alt="" class="pro-item__poster">
+            <div class="pro-item__words">
+                <p class="pro-item__detail">{{this.name}}</p>
+                <p class="pro-item__city">{{this.cityName}}</p>
+                <p class="pro-item__price">
+                    {{this.priceStr}}<span class="pro-item__price_small">元</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="ticketinfo">
+        <a class="mini-cell" style="border-top:none;">
+            <div class="wapper">
+                <div class="wrapper__cont">
+                    <div class="label">
+                        <i class="iconfont icon-duigou"></i>
+                        <span class="words">选座</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper__words_box">
+                <i class="iconfont icon-jiantouyou"></i>
+            </div>
+        </a>
+    </div>
+    {{#if this.favourable}}
+    <div class="dm-promotion">
+        <div class="cell">
+            <div class="title">
+                <div class="dm-promotion__bd">
+                    <div class="dm-promotion__bd__box">
+                        <p class="dm-promotion__bd__words">
+                            <i class="dm-promotion__bd__words_red">{{this.promotionTags}}</i>
+                            <span class="dm-promotion__bd__words_gray">
+                                    {{this.favourable}}以上套票在不同场次可能会有价格浮动，请以下单时的价格明细为准
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <i class="iconfont icon-jiantouyou icon-right-arrow"></i>
+            </div>
+        </div>
+    </div>
+    {{else}}
+        <p></p>
+    {{/if}}
+    <div class="project-desc">
+        <div class="cell cell-bottom-border">
+            <div class="title">
+                {{this.showTime}}
+            </div>
+            <div class="body">
+                <i class="iconfont icon-jiantouyou icon-right-arrow"></i>
+            </div>
+        </div>
+    </div>
+    <div class="dm-project-city">
+        <div class="cell cell-bottom-border">
+            <div class="title">
+                {{this.venueName}}
+            </div>
+            <div class="body">
+            </div>
+        </div>
+    </div>
+    <div class="dm-card project__cards">
+        <div class="dm-card__hd">
+            <h1 class="project-detail__hd">介绍</h1>
+        </div>
+        <div class="dm-card__bd">
+            <div class="project-detail__bd">
+                {{this.subHead}}
+            </div>
+        </div>
+        <div class="dm-card__ft">
+            <div class="project-detail__ft">
+                更多图文详情
+                <i class="iconfont icon-jiantouyou"></i>
+            </div>
+        </div>
+    </div>
+    <div class="dm-card">
+        <div class="dm-card__hd">
+            <h1 class="project-notice__hd">购票须知</h1>
+        </div>
+        <div class="dm-card__bd">
+            <ul class="project-notice__bd">
+                <li class="project-notice__item">
+                    <span class="project-notice__bd_title">入场时间</span>
+                    <span class="project-notice__bd_cont">演出前约30分钟</span>
+                </li>
+                <li class="project-notice__item">
+                    <span class="project-notice__bd_title">限购说明</span>
+                    <span class="project-notice__bd_cont">选座购买每单限6张，立即购买每单限20张。</span>
+            </li>
+                <li class="project-notice__item">
+                    <span class="project-notice__bd_title">儿童说明</span>
+                    <span class="project-notice__bd_cont">1.2米以下儿童谢绝入场（儿童项目除外），1.2米以上儿童需持票入场。</span>
+            </li>
+            </ul>
+        </div>
+        <div class="dm-card__ft">
+            <a href="javascript:;" class="project-notice__ft">
+                更多购票须知
+                <i class="iconfont icon-jiantouyou right-arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="perform__ft">
+    <div class="foot-wrapper">
+        <div class="button-group">
+            <div class="button-group__btn">
+                <div class="button-group__btn__icon">
+                    <i class="nav-button-icon iconfont icon-shouye"></i>
+                </div>
+                <p class="want__see">大麦首页</p>
+            </div>
+            <div class="button-group__btn">
+                <div class="button-group__btn__icon">
+                    <i class="nav-button-icon iconfont icon-shoucang"></i>
+                    <p class="want__see">关注</p>
+                </div>
+            </div>
+            <div class="button-group__btn1">
+                <div class="dm-button dm-button__primary dm-button__large">
+                    <div style="display:flex;align-items:center;height: 100%;justify-content: center;">
+                            <h2>选座购买</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

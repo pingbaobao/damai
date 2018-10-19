@@ -368,87 +368,217 @@
         position: sticky;
         bottom: 0;
         min-height: 1.2rem;
-        .foot-wrapper{
-            border-top: 1px solid #ccc;
-            max-width: 10rem;
-            margin: 0 auto;
-            background: #fff;
-            .button-group {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: flex;
-                .button-group__btn{
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                    -webkit-flex-direction: column;
-                    flex-direction: column;
-                    width: 1.33333rem;
-                    height: 1.28rem;
-                    background: #fff;
-                    border-right: 1px solid #ccc;
+        
+    }
+}
+
+.dm-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    z-index: 2009;
+}
+.dm-popup-bottom {
+    top: auto;
+    right: auto;
+    bottom: -38%;
+    left: 0%;
+    //-webkit-transform: translate3d(-50%,0,0);
+    transform: translate3d(0%,-100%,0);
+
+}
+.ticket-info-popup {
+    width: 100%;
+    //display: none;
+    .container {
+        max-height: 11.33333rem;
+        height: 6.66667rem;
+        overflow-y: scroll;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        .ticket-info__title{
+            padding: .45333rem 0 .46667rem;
+            font-size: .4rem;
+            text-align: center;
+        }
+        .ticket-info__bd{
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            overflow: scroll;
+            .ticket-info__bd__item{
+                font-size: .34667rem;
+                color: #999;
+                padding-bottom: .34667rem;
+                .ticket-info__bd__tip{
+                    padding-left: .32rem;
+                    padding-bottom: .10667rem;
+                    font-size: .34667rem;
+                    color: #222;
+                    .ticket-info__bd__icon {
+                        margin-right: .4rem;
+                    }
+                }
+                .ticket-info__bd__dec{
+                    padding: 0 .8rem 0 1.06667rem;
+                    line-height: .53333rem;
+                    white-space: pre-line;
                 }
             }
-            .button-group__btn, .foot-wrapper .button-group__btn__icon {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-            }
-            .nav-button-icon {
-                line-height: .56rem;
-                font-size: .56rem;
-                color: #888;
-            }
-            .want__see {
-                text-align: center;
+        }
+    }
+}
+.icon-duigou, .icon-shenfenzheng {
+    float: left;
+    font-size: .34667rem;
+    color: #ff1268;
+}
+
+.v-modal {
+    position: fixed;
+    //display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background: #000;
+    z-index: 2008;
+}
+
+.project-promotion-popup{
+    width: 100%;
+    max-height: 11.33333rem;
+    height: 6.66667rem;
+    overflow: scroll;
+    .project-promotion-popup__title{
+        padding: .42667rem 0;
+        font-size: .42667rem;
+        color: #3d3d3d;
+        text-align: center;
+    }
+    .project-promotion-popup__bd {
+        padding: 0 1.42667rem;
+        .project-promotion-popup__bd__box{
+            position: relative;
+            margin-bottom: .4rem;
+            .project-promotion-popup__tip {
+                position: absolute;
+                left: -1.06667rem;
+                top: 0;
+                padding: .06667rem .08rem;
+                margin-right: .13333rem;
+                border-radius: .05333rem;
+                font-style: normal;
+                border: 1px solid #ff1268;
                 font-size: .26667rem;
+                color: #ff1268;
+            }
+            .project-promotion-popup__cont{
+                font-size: .34667rem;
                 color: #666;
-            }
-
-            .button-group__btn1{
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-flex: 1;
-                -webkit-flex: 1;
-                flex: 1;
-                width: 8.66667rem;
-                -webkit-box-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                .dm-button__large {
-                    height: 1.28rem;
-                }
-                .dm-button__primary {
-                    font-size: .4rem;
-                    background-image: -webkit-linear-gradient(left,#ff4aae,#ff1268);
-                    background-image: linear-gradient(90deg,#ff4aae,#ff1268);
-                    color: #fff;
-                }
-                .dm-button {
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                    -webkit-flex-direction: column;
-                    flex-direction: column;
-                    width: 100%;
-                    text-decoration: none;
-                }
-
-                h2{
-                    text-align: center;
-                    font-size: .4rem;
-                    color: #fff;
-                    line-height: 1.28em;
+                pre{
+                    white-space: pre-line;
                 }
             }
+        }
+    }
+}
+
+.foot-wrapper{
+    border-top: 1px solid #ccc;
+    max-width: 10rem;
+    margin: 0 auto;
+    background: #fff;
+    .button-group {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        .button-group__btn{
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            width: 1.33333rem;
+            height: 1.28rem;
+            background: #fff;
+            border-right: 1px solid #ccc;
+        }
+    }
+    .button-group__btn, .foot-wrapper .button-group__btn__icon {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .nav-button-icon {
+        line-height: .56rem;
+        font-size: .56rem;
+        color: #888;
+    }
+    .want__see {
+        text-align: center;
+        font-size: .26667rem;
+        color: #666;
+    }
+
+    .button-group__btn1{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width: 8.66667rem;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        .dm-button__large {
+            height: 1.28rem;
+        }
+        .dm-button__primary {
+            font-size: .4rem;
+            background-image: -webkit-linear-gradient(left,#ff4aae,#ff1268);
+            background-image: linear-gradient(90deg,#ff4aae,#ff1268);
+            color: #fff;
+        }
+        .dm-button {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        h2{
+            text-align: center;
+            font-size: .4rem;
+            color: #fff;
+            line-height: 1.28em;
         }
     }
 }

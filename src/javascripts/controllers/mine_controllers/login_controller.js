@@ -34,7 +34,17 @@ const render = () => {
                 $('.toastWrapper_1').removeClass('show');
             },1000)
         }
-        if(phone_value===phone_value_1 && is_login === true){
+        if(phone_value===phone_value_1){
+            is_login = true;
+        }else{
+            $('.toastWrapper_1').find('.c-toast').html('用户不存在请注册');
+            $('.toastWrapper_1').addClass('show');
+            setTimeout(()=>{
+                $('.toastWrapper_1').removeClass('show');
+            },1000);
+            is_login = false;
+        }
+        if(is_login === true){
             router.switch('#/my');
             
         }

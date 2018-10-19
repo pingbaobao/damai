@@ -12,7 +12,9 @@ const render = () => {
   home_showcontrol_control.render();
   home_show_control.render();
   home_showcontrol_list_control.render();
-
+  $('.header__location').tap(function () {
+    $(location).prop('href', 'http://localhost:8080/#/location');
+  })
 }
 export default {
   render

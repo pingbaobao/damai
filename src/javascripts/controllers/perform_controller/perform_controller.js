@@ -1,7 +1,8 @@
 import perform_template from '../../views/perform/perform.html';
-import perform_content_template from '../../views/perform/perform-data.html'
+import perform_content_template from '../../views/perform/perform-content.html'
 
 const render = () => {
+    document.querySelector('title').innerHTML='详情';
     $('#root').html(perform_template );
     getPerformContent();
 }
@@ -49,17 +50,23 @@ const control = () => {
     let datasources =  JSON.parse(sessionStorage.getItem("data"));
     let main = datasources[index];
     let projectMain = [];
+    if(JSON.parse(sessionStorage.getItem("projectMain"))!=null){
+        projectMain=JSON.parse(sessionStorage.getItem("projectMain"))
+    }
     let phone =  JSON.parse(sessionStorage.getItem("phone"));
     $('.foot-wrapper').on('click','.button-group__btn1',function(){
         if(phone != null){
-            projectMain.push(JSON.parse(sessionStorage.getItem("projectMain")));
-            projectMain.push(main);
+            projectMain.push(main)
             let str = JSON.stringify(projectMain);
             sessionStorage.setItem("projectMain", str);
-            $(location).prop('href', 'http://localhost:8080/#/order');
+            $('.buy-cover').fadeIn();
+            setTimeout(()=>{
+                $('.buy-cover').fadeOut();
+            },2000)
         }else{
             $(location).prop('href', 'http://localhost:8080/#/login');
         }
+        
     })
 }
 

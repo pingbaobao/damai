@@ -440,14 +440,15 @@
                     white-space: pre-line;
                 }
             }
+            .icon-duigou, .icon-shenfenzheng {
+                float: left;
+                font-size: .34667rem;
+                color: #ff1268;
+            }
         }
     }
 }
-.icon-duigou, .icon-shenfenzheng {
-    float: left;
-    font-size: .34667rem;
-    color: #ff1268;
-}
+
 
 .v-modal {
     position: fixed;
@@ -582,4 +583,22 @@
             line-height: 1.28em;
         }
     }
+}
+
+.buy-cover{
+    display: none;
+    width: 2.6667rem;
+    height: 2.6667rem;
+    position: fixed;
+    z-index: 1000;
+    background: #000;
+    color: #fff;
+    opacity: .65;
+    top: 43%;
+    left: 36%;
+    text-align: center;
+    line-height: 2.6667rem;
+    font-size: 0.4267rem;
+    border-radius: 0.1333rem;
+    padding: 0 0.1333rem;
 }

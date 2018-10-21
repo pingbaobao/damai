@@ -47,12 +47,10 @@ const control = () => {
     
     let projectMain = [];
     let phone =  JSON.parse(sessionStorage.getItem("phone"));
-    console.log(phone)
     $('.foot-wrapper').on('click','.button-group__btn1',function(){
         if(phone != null){
             projectMain.push(JSON.parse(sessionStorage.getItem("projectMain")));
             projectMain.push(main);
-            //console.log(projectMain);
             let str = JSON.stringify(projectMain);
             sessionStorage.setItem("projectMain", str);
             $(location).prop('href', 'http://localhost:8080/#/order');

@@ -48,6 +48,7 @@ const control = () => {
     
     $('.foot-wrapper').on('click','.button-group__btn1',function(){
         if(phone === ''){
+            console.log('no')
             $(location).prop('href', 'http://localhost:8080/#/login');
         }else{
             projectMain.push(main);

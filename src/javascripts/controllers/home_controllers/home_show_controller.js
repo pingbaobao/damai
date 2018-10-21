@@ -84,14 +84,6 @@ const render = async  () => {
     })
 
 
-
-    var  _refresh=false;
-    _scroll.on('scroll', ({ x, y }) => {
-        if(y<_scroll.maxScrollY &&_refresh===false){
-            _refresh=true;
-             refresh();
-        }
-    })
     //下拉刷新
     let _showdatasource=_home_show_list;
     const refresh=async()=> {
@@ -104,5 +96,20 @@ const render = async  () => {
         await _scroll.refresh();
         _refresh=false;
     }
+
+    $('.show-wrapper').on('click','.show-item',function(){
+        sessionStorage.setItem("index", $(this).index());
+        let str = JSON.stringify(_showdatasource)
+        sessionStorage.setItem("data", str);
+        //console.log('ok')
+        $(location).prop('href', 'http://localhost:8080/#/perform');
+    })
+    var  _refresh=false;
+    _scroll.on('scroll', ({ x, y }) => {
+        if(y<_scroll.maxScrollY &&_refresh===false){
+            _refresh=true;
+             refresh();
+        }
+    })
 }
 export default { render }  

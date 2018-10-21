@@ -66,7 +66,10 @@ const control = () => {
         }else{
             $(location).prop('href', 'http://localhost:8080/#/login');
         }
-        
+    })
+
+    $('.foot-wrapper').on('click','.button-group__btn',function(){
+        $(location).prop('href', 'http://localhost:8080/#/home');
     })
 }
 

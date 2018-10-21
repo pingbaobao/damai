@@ -1,5 +1,5 @@
 import perform_template from '../../views/perform/perform.html';
-import perform_content_template from '../../views/perform/perform-content.html'
+import perform_data_template from '../../views/perform/perform-data.html'
 
 const render = () => {
     $('#root').html(perform_template );
@@ -11,7 +11,7 @@ const getPerformContent = () =>{
     let datasources =  JSON.parse(sessionStorage.getItem("data"));
     let main = datasources[index];
     //console.log(main);
-    let _template = Handlebars.compile(perform_content_template);
+    let _template = Handlebars.compile(perform_data_template);
     let _html = _template(main);
     $('.main').html(_html);
     control();

@@ -372,7 +372,7 @@
     }
 }
 
-.dm-popup {
+.dm-pop {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -388,7 +388,7 @@
     transition: .2s ease-out;
     z-index: 2009;
 }
-.dm-popup-bottom {
+.dm-pop-bottom {
     top: auto;
     right: auto;
     bottom: -38%;
@@ -397,7 +397,7 @@
     transform: translate3d(0%,-100%,0);
 
 }
-.ticket-info-popup {
+.ticket-info-pop {
     width: 100%;
     display: none;
     .container {
@@ -461,24 +461,24 @@
     z-index: 2008;
 }
 
-.project-promotion-popup{
+.project-promotion-pop{
     width: 100%;
     display: none;
     max-height: 11.33333rem;
     height: 6.66667rem;
     overflow: scroll;
-    .project-promotion-popup__title{
+    .project-promotion-pop__title{
         padding: .42667rem 0;
         font-size: .42667rem;
         color: #3d3d3d;
         text-align: center;
     }
-    .project-promotion-popup__bd {
+    .project-promotion-pop__bd {
         padding: 0 1.42667rem;
-        .project-promotion-popup__bd__box{
+        .project-promotion-pop__bd__box{
             position: relative;
             margin-bottom: .4rem;
-            .project-promotion-popup__tip {
+            .project-promotion-pop__tip {
                 position: absolute;
                 left: -1.06667rem;
                 top: 0;
@@ -490,7 +490,7 @@
                 font-size: .26667rem;
                 color: #ff1268;
             }
-            .project-promotion-popup__cont{
+            .project-promotion-pop__cont{
                 font-size: .34667rem;
                 color: #666;
                 pre{

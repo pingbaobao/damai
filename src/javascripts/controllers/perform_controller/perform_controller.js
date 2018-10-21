@@ -20,6 +20,7 @@ const getPerformContent = () =>{
 
 
 const control = () => {
+    
     $('#root').on('click','.ticketinfo',function(){
         $('.ticket-info-pop').css('display','block');
         setTimeout(function(){
@@ -44,7 +45,9 @@ const control = () => {
     })
 
     
-    
+    let index = sessionStorage.getItem("index");
+    let datasources =  JSON.parse(sessionStorage.getItem("data"));
+    let main = datasources[index];
     let projectMain = [];
     let phone =  JSON.parse(sessionStorage.getItem("phone"));
     $('.foot-wrapper').on('click','.button-group__btn1',function(){

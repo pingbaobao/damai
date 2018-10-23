@@ -7,6 +7,13 @@ const render = () => {
     scrollY: true,
     click: true
     });
+    $('li').on('tap',async function (){
+        let _site = $(this).text();
+        console.log($(this).text())
+        localStorage.setItem('site',_site);
+        location.hash = '#/index';
+    })
+    
 }
 export default {
     render

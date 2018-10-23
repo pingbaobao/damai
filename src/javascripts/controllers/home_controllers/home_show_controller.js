@@ -24,6 +24,9 @@ const render = async  () => {
         //重置列表隐藏藏样式
         $(".showcontroler-list").find("ul").css({
             display:"none"
+        });
+        $('.layer').css({
+            display:'block'
         })
         //弹出显示整个盒子
         $(".showcontroler-list").show();
@@ -50,6 +53,7 @@ const render = async  () => {
                 var _navIndex=1;
              }
             $(".showcontrol__nav").find("li").eq(_navIndex).html($(this).text()+' <i class="iconfont icon-jiantouxia"></i>');
+            $(".showcontrol__nav-clone").find("li").eq(_navIndex).html($(this).text()+' <i class="iconfont icon-jiantouxia"></i>');
         })
         //点击消失列表 
         $(".showcontroler-list").click(function () {
